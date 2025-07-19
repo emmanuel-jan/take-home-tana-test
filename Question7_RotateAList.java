@@ -1,0 +1,59 @@
+//Question 7
+// In the following question you should rotate a list by moving each element in the
+// list n times to the right.
+// Example, given the following list:
+// "ID_A01"->"ID_A02"->"ID_A03"->"ID_A04"->"ID_A05"->"ID_A06"->null and n=2
+// You should return the following list:
+// "ID_A05"->"ID_A06"->"ID_A01"->"ID_A02"->"ID_A03"->"ID_A04"->null
+
+import java.util.LinkedList;
+
+public class Question7_RotateAList {
+    private LinkedList<String> list;
+    private int n;
+
+    public Question7_RotateAList(LinkedList<String> list, int n){
+        this.list = list;
+        this.n = n;
+    }
+
+    public LinkedList<String> rotateList(){
+        int size = list.size();
+
+        if(size == 0 || n % size == 0) return list;
+
+        n = n % size;
+
+        //getting ths last n elements
+        LinkedList<String> rotatedList = new LinkedList<>();
+        rotatedList.addAll(list.subList(size - n, size));
+        rotatedList.addAll(list.subList(0, size - n));
+
+        return rotatedList;
+    }
+
+    private static void printList(LinkedList<String> list){
+        for(String element : list){
+            System.out.print(element + "->");
+        }
+        System.out.println("null");
+    }
+
+    public static void main(String[] args){
+        LinkedList<String> list = new LinkedList<>();
+        list.add("ID_A01");
+        list.add("ID_A02");
+        list.add("ID_A03");
+        list.add("ID_A04");
+        list.add("ID_A05");
+        list.add("ID_A06");
+        System.out.println("This is the original list:");
+        printList(list);
+
+        int n = 2;
+        Question7_RotateAList myQuestion7 = new Question7_RotateAList(list,n);
+        System.out.println("Printing out list rotated by " + n + " positions");
+        LinkedList<String> rotatedList = myQuestion7.rotateList();
+        printList(rotatedList);
+    }
+}
