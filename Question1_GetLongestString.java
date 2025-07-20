@@ -46,7 +46,7 @@ public class Question1_GetLongestString {
         return longestValid;
     }
 
-    public boolean isStringValid(String str, Set<Character> chars){
+    private boolean isStringValid(String str, Set<Character> chars){
         // loop through all the characters in the string
         for(int i = 0; i < str.length(); i++){
             char c = str.charAt(i);

@@ -21,6 +21,7 @@ public class Question4_FirstProductInAnArray {
             return null;
         }
 
+        // LinkedHashMap preserves insertion order
         Map<String, Integer> frequency = new LinkedHashMap<>();
 
         //counting frequencies
