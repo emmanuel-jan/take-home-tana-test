@@ -15,7 +15,7 @@ results.
 
 <ins>Question 1
 
-To solve this problem filtered invalid
+To solve this problem, I filtered invalid
 strings, used a helper method to validate
 efficiently then tracked the longest string 
 as I looped through the strings.

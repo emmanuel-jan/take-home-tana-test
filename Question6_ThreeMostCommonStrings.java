@@ -40,12 +40,13 @@ public class Question6_ThreeMostCommonStrings {
             }
         }
 
-        //extracting the top 3 words and sorting the alphabetically
+        //extracting the top 3 words
         List<String> topThreeWords = new ArrayList<>();
         while(!priorityQueue.isEmpty()){
             topThreeWords.add(priorityQueue.poll().getKey());
         }
 
+        // sorting the alphabetically
         Collections.sort(topThreeWords);
         return topThreeWords;
     }

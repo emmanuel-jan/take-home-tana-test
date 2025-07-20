@@ -3,6 +3,7 @@
 // list n times to the right.
 // Example, given the following list:
 // "ID_A01"->"ID_A02"->"ID_A03"->"ID_A04"->"ID_A05"->"ID_A06"->null and n=2
+//"ID_A05"->"ID_A06" "ID_A01"->"ID_A02"->"ID_A03"->"ID_A04
 // You should return the following list:
 // "ID_A05"->"ID_A06"->"ID_A01"->"ID_A02"->"ID_A03"->"ID_A04"->null
 
@@ -20,13 +21,16 @@ public class Question7_RotateAList {
     public LinkedList<String> rotateList(){
         int size = list.size();
 
+        // edge case check
         if(size == 0 || n % size == 0) return list;
 
-        n = n % size;
+        n = n % size; // ensuring n does not exceed the list size
 
         //getting ths last n elements
         LinkedList<String> rotatedList = new LinkedList<>();
+        // adding the last elements of the list
         rotatedList.addAll(list.subList(size - n, size));
+        //adding the remaining elements
         rotatedList.addAll(list.subList(0, size - n));
 
         return rotatedList;

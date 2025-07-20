@@ -3,7 +3,7 @@
 // the following conditions:
 //  1. The string should have non-repetitive identical characters, for example 'AABCD' is
 //  not valid since it contains 'AA'.
-//  2. The string should only contain the characters among given list of valid characters.
+//  2. The string should only contain the characters among the given list of valid characters.
 //  Function parameters: - characters - List of valid characters. - strings - Array of Strings
 //  Example Scenario:
 //  List of characters: "ABCD"

@@ -19,27 +19,31 @@ public class Question2_UniqueSums {
         this.numbers = numbers;
     }
     public int uniqueSums(){
+        //A set ensures that duplicate combinations are only counted once
         Set<List<Integer>> uniqueCombinations = new HashSet<>();
         Arrays.sort(numbers);
-        backtrack(numbers, result, 0, new ArrayList<>(), uniqueCombinations);
+        backtrack(numbers, result, 0, new ArrayList<>(), uniqueCombinations); //recursive method call
         return uniqueCombinations.size();
     }
 
-    private static void backtrack(int[] numbers,
-                                  int rem,
-                                  int start,
-                                  List<Integer> currentComboList,
-                                  Set<List<Integer>> res ){
-        if(rem == 0){
-            res.add(new ArrayList<>(currentComboList));
+    private static void backtrack(int[] numbers, // input array
+                                  int remaining, // how much more we need to reach the target
+                                  int start, // current index to start picking from
+                                  List<Integer> currentComboList, // current combination we are building
+                                  Set<List<Integer>> result // set that stores all valid combinations
+    ){
+        //Base case — if the sum of current elements equals the target.
+        if(remaining == 0){
+            result.add(new ArrayList<>(currentComboList));
         }
-        if(rem < 0){
+        //Base case — if sum exceeds the target, stop exploring further.
+        if(remaining < 0){
             return;
         }
         for(int i = start; i < numbers.length; i++){
             currentComboList.add(numbers[i]);
-            backtrack(numbers, rem - numbers[i], i + 1, currentComboList, res);
-            currentComboList.remove(currentComboList.size() - 1);
+            backtrack(numbers, remaining - numbers[i], i + 1, currentComboList, result); // recursively explore
+            currentComboList.remove(currentComboList.size() - 1); // remove the last element added
         }
 
     }

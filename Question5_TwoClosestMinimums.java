@@ -34,7 +34,7 @@ public class Question5_TwoClosestMinimums {
                     int distance = i - lastIndex;
                     minimumDistance = Math.min(minimumDistance, distance);
                 }
-                lastIndex = i;
+                lastIndex = i; //update the last seen index of the minimum
             }
         }
         return minimumDistance;

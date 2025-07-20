@@ -9,7 +9,10 @@
 // Choose i=2, and the array becomes [1,1,1].
 // Choose i=3, and the array becomes [1,1,0].
 // Choose i=2, and the array becomes [1,0,0].
-//
+
+//NB
+//This is only possible if the Greatest Common Divisor of the entire array is equal to the first
+//element.
 
 public class Question3_AllZeroArray {
     private int[] list;
@@ -19,21 +22,22 @@ public class Question3_AllZeroArray {
     }
 
     public int allZeroArray(){
-        int num = list[0];
+        int gcd = list[0];
 
+        // loop through the list as we update our GCD
         for(int i = 1; i < list.length; i++){
-            num = computeNum(num, list[i]);
+            gcd = findGCD(gcd, list[i]);
         }
 
         // setting to 1 or 0 if it is possible
-        return num == list[0] ? 1 : 0;
+        return gcd == list[0] ? 1 : 0;
     }
 
-    private int computeNum(int a, int b){
+    private int findGCD(int a, int b){
         while (b != 0){
-            int temp = b;
-            b = a % b;
-            a = temp;
+            int temp = b; // saving the value of 'b' temporarily
+            b = a % b; // updating 'b' to be the remainder of 'a' divided by 'b'
+            a = temp; // setting 'a' to the old value of b
         }
         return a;
     }

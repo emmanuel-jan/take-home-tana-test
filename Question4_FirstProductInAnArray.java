@@ -24,6 +24,8 @@ public class Question4_FirstProductInAnArray {
         // LinkedHashMap preserves insertion order
         Map<String, Integer> frequency = new LinkedHashMap<>();
 
+        // key value pairs
+
         //counting frequencies
         for(String product: products){
             frequency.put(product, frequency.getOrDefault(product,0)+1);
