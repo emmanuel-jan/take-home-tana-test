@@ -20,30 +20,6 @@ strings, used a helper method to validate
 efficiently then tracked the longest string 
 as I looped through the strings.
 
-<ins>Question 2
-
-To solve the problem on how many unique 
-ways the array's numbers can be added to
-match the "result." I used backtracking
-technique. Using the backtracking algorithm 
-I recursively explored all combinations of 
-the array. I tracked the current sum and 
-stopped exploring when it matched the 
-"result" or when the "result" is exceeded.
-To avoid duplicates I first sorted the array
-
-<ins>Question 3 
-
-For this problem, in order to
-make all elements zero except the first, the
-first element must be able to generate all
-others using repeated subtractions. This is
-only possible if the Greatest Common Divisor
-of the entire array is equal to the first
-element. For my solution I computed the GCD
-of the entire array. If GCD == a[0] return 1
-else return 0
-
 <ins>Question 4
 
 The goal of this problem is to find the 
