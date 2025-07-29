@@ -7,10 +7,10 @@
 // The distance is 3-0 = 3
 
 
-public class Question5_TwoClosestMinimums {
+public class Question_TwoClosestMinimums {
 
     private int[] numbers;
-    public Question5_TwoClosestMinimums(int[] numbers){
+    public Question_TwoClosestMinimums(int[] numbers){
         this.numbers = numbers;
     }
 
@@ -41,7 +41,7 @@ public class Question5_TwoClosestMinimums {
     }
     public static void main(String[] args){
         int[] numbers = {1,2,3,1,4,5,2};
-        Question5_TwoClosestMinimums myQuestion5 = new Question5_TwoClosestMinimums(numbers);
+        Question_TwoClosestMinimums myQuestion5 = new Question_TwoClosestMinimums(numbers);
         System.out.println("The minimum distance is: " + myQuestion5.twoClosestMinimums());
     }
 }

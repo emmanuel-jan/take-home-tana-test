@@ -9,10 +9,10 @@
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class Question4_FirstProductInAnArray {
+public class Question_FirstProductInAnArray {
     private String[] products;
 
-    public Question4_FirstProductInAnArray(String[] products){
+    public Question_FirstProductInAnArray(String[] products){
         this.products = products;
     }
 
@@ -43,7 +43,7 @@ public class Question4_FirstProductInAnArray {
     }
     public static void main(String[] args){
         String[] products = { "Apple", "Computer", "Apple", "Bag" };
-        Question4_FirstProductInAnArray myQuestion4 = new Question4_FirstProductInAnArray(products);
+        Question_FirstProductInAnArray myQuestion4 = new Question_FirstProductInAnArray(products);
         System.out.println("The first unique product is: " + myQuestion4.firstProduct());
     }
 }

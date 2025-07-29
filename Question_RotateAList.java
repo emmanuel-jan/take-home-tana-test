@@ -9,11 +9,11 @@
 
 import java.util.LinkedList;
 
-public class Question7_RotateAList {
+public class Question_RotateAList {
     private LinkedList<String> list;
     private int n;
 
-    public Question7_RotateAList(LinkedList<String> list, int n){
+    public Question_RotateAList(LinkedList<String> list, int n){
         this.list = list;
         this.n = n;
     }
@@ -55,7 +55,7 @@ public class Question7_RotateAList {
         printList(list);
 
         int n = 2;
-        Question7_RotateAList myQuestion7 = new Question7_RotateAList(list,n);
+        Question_RotateAList myQuestion7 = new Question_RotateAList(list,n);
         System.out.println("Printing out list rotated by " + n + " positions");
         LinkedList<String> rotatedList = myQuestion7.rotateList();
         printList(rotatedList);

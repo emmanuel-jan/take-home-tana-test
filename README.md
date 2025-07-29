@@ -6,21 +6,21 @@ To run  the code :
 
 javac [filename].java -> java [filename]
 
-eg. run javac Question1_GetLongestString.java 
-then run java Question1_GetLongestString
+eg. run javac Question_GetLongestString.java 
+then run java Question_GetLongestString
 
 **NB:** All the questions have main methods 
 which can be run to test against the expected
 results.
 
-<ins>Question 1
+<ins>Question_GetLongestString
 
 To solve this problem, I filtered invalid
 strings, used a helper method to validate
 efficiently then tracked the longest string 
 as I looped through the strings.
 
-<ins>Question 4
+<ins>Question_FirstProductInArray
 
 The goal of this problem is to find the 
 first string that appears only once in the
@@ -29,7 +29,7 @@ exists.I used a LinkedHashMap to store the
 products as keys and their frequencies as 
 values
 
-<ins>Question 5
+<ins>Question_TwoClosestMinimums
 
 To solve the problem, I found the minimum 
 number by iterating through the array, tracked
@@ -40,7 +40,7 @@ previous occurrence and keep track of the
 smallest distance then return the smallest 
 distance
 
-<ins>Question 6
+<ins>Question_ThreeMostCommonStrings
 
 To solve this problem I first converted
 the sentence to lowercase and split it into
@@ -51,7 +51,7 @@ top 3 most frequency words while iterating
 through the Map. After extracting the top 3
 words I sorted them in alphabetical order.
 
-<ins>Question 7
+<ins>Question_RotateAList
 
 To rotate the list I first got the size
 of the list then normalized n by doing 

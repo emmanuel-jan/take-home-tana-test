@@ -19,14 +19,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Question1_GetLongestString {
+public class Question_GetLongestString {
 
     private String[] strings;
     private Set<Character> validChars;
     //initializing the longest valid string with an empty string
     String longestValid = "";
 
-    public Question1_GetLongestString(List<Character> characters, String[] strings){
+    public Question_GetLongestString(List<Character> characters, String[] strings){
         this.strings = strings;
         // converting the list of characters into a set for faster lookup
         this.validChars = new HashSet<>(characters);
@@ -70,7 +70,7 @@ public class Question1_GetLongestString {
         String[] strings = {"AABCDA", "ABCDZADC", "ABCDBCA", "ABCDABDCA"};
 
         // instantiating the class Question1_GetLongestString
-        Question1_GetLongestString myQuestion1 = new Question1_GetLongestString(characters,strings);
+        Question_GetLongestString myQuestion1 = new Question_GetLongestString(characters,strings);
 
         // printing the longest valid string
         System.out.println("The longest valid string is: " + myQuestion1.getLongestString());

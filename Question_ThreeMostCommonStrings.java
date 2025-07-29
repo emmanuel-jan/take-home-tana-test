@@ -8,10 +8,10 @@
 
 import java.util.*;
 
-public class Question6_ThreeMostCommonStrings {
+public class Question_ThreeMostCommonStrings {
     private String sentence;
 
-    public Question6_ThreeMostCommonStrings(String sentence){
+    public Question_ThreeMostCommonStrings(String sentence){
         this.sentence = sentence;
     }
 
@@ -54,7 +54,7 @@ public class Question6_ThreeMostCommonStrings {
     //Testing the function
     public static void main(String[] agrs){
         String sentence = "hi there care to discuss algorithm basis or how to solve algorithm or";
-        Question6_ThreeMostCommonStrings myQuestion6 = new Question6_ThreeMostCommonStrings(sentence);
+        Question_ThreeMostCommonStrings myQuestion6 = new Question_ThreeMostCommonStrings(sentence);
         List<String> result = myQuestion6.threeMostCommonStrings();
         System.out.println("The three most common strings are: " + result);
     }
